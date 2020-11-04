@@ -56,8 +56,8 @@ var formSubmitHandler = function(event) {
 };
 var displayWeather = function(currentweather) {
     const time = moment().format("M/D/YYYY");
-    var uvUrl = "http://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + currentweather.coord.lat + "&lon=" + currentweather.coord.lon + "&appid=0bd635ff0a032a8e60a26d70f81507ea";
-    var fiveUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + currentweather.name + "&units=imperial&appid=0bd635ff0a032a8e60a26d70f81507ea";
+    var uvUrl = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + currentweather.coord.lat + "&lon=" + currentweather.coord.lon + "&appid=0bd635ff0a032a8e60a26d70f81507ea";
+    var fiveUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentweather.name + "&units=imperial&appid=0bd635ff0a032a8e60a26d70f81507ea";
     infoContainerEl.innerHTML = "";
     fetch(uvUrl)
     .then(function(response) {
